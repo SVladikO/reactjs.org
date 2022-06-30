@@ -197,31 +197,7 @@ The `defaultProps` will be used to ensure that `this.props.name` will have a val
 
 ### Function Components {#function-components}
 
-If you are using function components in your regular development, you may want to make some small changes to allow PropTypes to be properly applied.
-
-Let's say you have a component like this:
-
-```javascript
-export default function HelloWorldComponent({ name }) {
-  return (
-    <div>Hello, {name}</div>
-  )
-}
-```
-
-To add PropTypes, you may want to declare the component in a separate function before exporting, like this:
-
-```javascript
-function HelloWorldComponent({ name }) {
-  return (
-    <div>Hello, {name}</div>
-  )
-}
-
-export default HelloWorldComponent
-```
-
-Then, you can add PropTypes directly to the `HelloWorldComponent`:
+If you are using function components in your regular development, you can implement propTypes as in example belowe.
 
 ```javascript
 import PropTypes from 'prop-types'
